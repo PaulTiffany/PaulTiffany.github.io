@@ -15,7 +15,9 @@
     --bg: #0c0d0c;
     --rule: rgba(232,230,223,0.16);
   }
-  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); max-width: 100%; overflow-x: hidden; }
   body { font-family: 'Oswald', sans-serif; font-weight: 300; }
   a { color: var(--ink); }
   a:hover { color: #ffffff; }
@@ -27,7 +29,8 @@
     width: 128px; height: 128px; object-fit: cover; border-radius: 50%;
     border: 1px solid var(--rule); flex: none;
   }
-  .hero h1 { font-weight: 500; font-size: 30px; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; }
+  .hero-text { min-width: 0; }
+  .hero h1 { font-weight: 500; font-size: 30px; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; overflow-wrap: break-word; }
   .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 14px; letter-spacing: 2px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
 
   h2 {
@@ -40,8 +43,8 @@
   ul.entries { list-style: none; margin: 0; padding: 0; }
   ul.entries li { margin-bottom: 20px; }
   ul.entries li:last-child { margin-bottom: 0; }
-  .entry-title { font-size: 17px; font-weight: 400; color: var(--ink); line-height: 1.45; }
-  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; }
+  .entry-title { font-size: 17px; font-weight: 400; color: var(--ink); line-height: 1.45; overflow-wrap: break-word; hyphens: auto; }
+  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; overflow-wrap: break-word; }
   .entry-meta a { text-decoration: underline; }
 
   nav.links { display: flex; flex-wrap: wrap; gap: 10px 8px; }
@@ -54,9 +57,14 @@
 
   footer { margin-top: 64px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--ink-dimmer); }
 
-  @media (max-width: 480px) {
-    .hero { flex-direction: column; align-items: flex-start; gap: 20px; }
-    .hero img { width: 96px; height: 96px; }
+  @media (max-width: 560px) {
+    .wrap { padding: 48px 20px 56px; }
+    .hero { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .hero img { width: 92px; height: 92px; }
+    .hero h1 { font-size: 24px; }
+    .hero .lead { font-size: 12px; letter-spacing: 1.5px; }
+    .entry-title { font-size: 16px; }
+    nav.links a { padding: 9px 12px; font-size: 12px; }
   }
 </style>
 </head>
@@ -65,7 +73,7 @@
 
   <div class="hero">
     <img src="assets/author.jpg" alt="Paul Carver Tiffany III">
-    <div>
+    <div class="hero-text">
       <h1>Paul Carver Tiffany III</h1>
       <p class="lead">Independent Researcher</p>
     </div>
