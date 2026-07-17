@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paul Carver Tiffany III</title>
 <meta name="description" content="Paul Carver Tiffany III — independent researcher. Operational epistemology, geometric alignment, and the software that carries them.">
+<meta name="theme-color" content="#0c0d0c">
+<meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -17,16 +19,22 @@
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-  html, body { margin: 0; background: var(--bg); color: var(--ink); max-width: 100%; overflow-x: hidden; }
-  body { font-family: 'Oswald', sans-serif; font-weight: 300; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font-family: 'Oswald', sans-serif; font-weight: 300; -webkit-tap-highlight-color: rgba(232,230,223,0.25); }
   a { color: var(--ink); }
   a:hover { color: #ffffff; }
 
-  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 80px; }
+  /*
+    Sizes are ~2x a normal comfortable scale, on purpose: this page exists
+    to be scanned off a business-card QR code on a phone, at arm's length,
+    often outdoors. Legibility at a glance wins over information density --
+    vertical and horizontal scrolling are an accepted tradeoff, not a bug.
+  */
+  .wrap { max-width: 900px; margin: 0 auto; padding: 72px 24px 96px; }
 
-  .hero { display: flex; align-items: center; gap: 32px; margin-bottom: 56px; }
+  .hero { display: flex; align-items: center; gap: 40px; margin-bottom: 80px; }
   .hero img {
-    width: 128px; height: 128px; object-fit: cover; border-radius: 50%;
+    width: 200px; height: 200px; object-fit: cover; border-radius: 50%;
     border: 1px solid var(--rule); flex: none;
   }
   /*
@@ -39,40 +47,40 @@
     both orientations land in the same comfortable range.
   */
   .hero-text { min-width: 0; }
-  .hero h1 { font-weight: 500; font-size: clamp(26px, 7vw, 32px); line-height: 1.2; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; overflow-wrap: break-word; }
-  .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 1.5px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
+  .hero h1 { font-weight: 500; font-size: clamp(52px, 14vw, 64px); line-height: 1.15; letter-spacing: 1px; margin: 0 0 14px; color: #f2f0e9; overflow-wrap: break-word; }
+  .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: clamp(26px, 6.6vw, 30px); letter-spacing: 1.5px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
 
   h2 {
-    font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: clamp(11px, 2.8vw, 13px); letter-spacing: 3px;
-    text-transform: uppercase; color: var(--ink-dim); margin: 0 0 18px; padding-bottom: 10px;
+    font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: clamp(22px, 5.6vw, 26px); letter-spacing: 3px;
+    text-transform: uppercase; color: var(--ink-dim); margin: 0 0 28px; padding-bottom: 16px;
     border-bottom: 1px solid var(--rule);
   }
-  section { margin-bottom: 44px; }
+  section { margin-bottom: 72px; }
 
   ul.entries { list-style: none; margin: 0; padding: 0; }
-  ul.entries li { margin-bottom: 20px; }
+  ul.entries li { margin-bottom: 40px; }
   ul.entries li:last-child { margin-bottom: 0; }
-  .entry-title { font-size: clamp(17px, 4.5vw, 19px); font-weight: 400; color: var(--ink); line-height: 1.45; overflow-wrap: break-word; hyphens: auto; }
-  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; line-height: 1.6; overflow-wrap: break-word; }
+  .entry-title { font-size: clamp(34px, 9vw, 38px); font-weight: 400; color: var(--ink); line-height: 1.35; overflow-wrap: break-word; hyphens: auto; }
+  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: clamp(26px, 6.6vw, 30px); letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 12px; line-height: 1.55; overflow-wrap: break-word; }
   .entry-meta a { text-decoration: underline; }
 
-  nav.links { display: flex; flex-wrap: wrap; gap: 10px 8px; }
+  nav.links { display: flex; flex-wrap: wrap; gap: 16px 12px; }
   nav.links a {
-    font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 1px;
-    text-decoration: none; border: 1px solid var(--rule); border-radius: 3px;
-    padding: 11px 16px; white-space: nowrap;
+    font-family: 'IBM Plex Mono', monospace; font-size: clamp(26px, 6.6vw, 30px); letter-spacing: 1px;
+    text-decoration: none; border: 1px solid var(--rule); border-radius: 4px;
+    padding: 16px 22px; white-space: nowrap;
   }
   nav.links a:hover { border-color: rgba(232,230,223,0.5); }
 
-  footer { margin-top: 64px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 2.6vw, 12px); letter-spacing: 1px; color: var(--ink-dimmer); }
+  footer { margin-top: 88px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(22px, 5.2vw, 24px); letter-spacing: 1px; color: var(--ink-dimmer); }
 
   /* Layout (not type size) still changes at a breakpoint -- stacking the
      hero photo above the name is a structural call, not something that
      should fluidly interpolate. */
   @media (max-width: 560px) {
-    .wrap { padding: 40px 20px 56px; }
-    .hero { flex-direction: column; align-items: flex-start; gap: 18px; }
-    .hero img { width: 92px; height: 92px; }
+    .wrap { padding: 48px 20px 64px; }
+    .hero { flex-direction: column; align-items: flex-start; gap: 24px; margin-bottom: 64px; }
+    .hero img { width: 150px; height: 150px; }
   }
 </style>
 </head>
