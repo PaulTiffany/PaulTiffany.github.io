@@ -4,69 +4,127 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paul Carver Tiffany III</title>
+<meta name="description" content="Paul Carver Tiffany III — independent researcher. Operational epistemology, geometric alignment, and the software that carries them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-  body {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
-    max-width: 38rem;
-    margin: 3rem auto;
-    padding: 0 1.25rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    background: #fafafa;
+  :root {
+    --ink: #e8e6df;
+    --ink-dim: rgba(232,230,223,0.62);
+    --ink-dimmer: rgba(232,230,223,0.42);
+    --bg: #0c0d0c;
+    --rule: rgba(232,230,223,0.16);
   }
-  h1 {
-    font-size: 1.6rem;
-    margin: 0 0 0.25rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font-family: 'Oswald', sans-serif; font-weight: 300; }
+  a { color: var(--ink); }
+  a:hover { color: #ffffff; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 80px; }
+
+  .hero { display: flex; align-items: center; gap: 32px; margin-bottom: 56px; }
+  .hero img {
+    width: 128px; height: 128px; object-fit: cover; border-radius: 50%;
+    border: 1px solid var(--rule); flex: none;
   }
-  p.lead {
-    color: #555;
-    margin: 0 0 2.5rem;
-  }
+  .hero h1 { font-weight: 500; font-size: 30px; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; }
+  .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 14px; letter-spacing: 2px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
+
   h2 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin: 2rem 0 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #444;
+    font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--ink-dim); margin: 0 0 18px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
   }
-  ul {
-    padding-left: 1.2rem;
-    margin: 0;
+  section { margin-bottom: 44px; }
+
+  ul.entries { list-style: none; margin: 0; padding: 0; }
+  ul.entries li { margin-bottom: 20px; }
+  ul.entries li:last-child { margin-bottom: 0; }
+  .entry-title { font-size: 17px; font-weight: 400; color: var(--ink); line-height: 1.45; }
+  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; }
+  .entry-meta a { text-decoration: underline; }
+
+  nav.links { display: flex; flex-wrap: wrap; gap: 10px 8px; }
+  nav.links a {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px;
+    text-decoration: none; border: 1px solid var(--rule); border-radius: 3px;
+    padding: 8px 14px; white-space: nowrap;
   }
-  li {
-    margin-bottom: 0.55rem;
-  }
-  a {
-    color: #1a4d8c;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
+  nav.links a:hover { border-color: rgba(232,230,223,0.5); }
+
+  footer { margin-top: 64px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--ink-dimmer); }
+
+  @media (max-width: 480px) {
+    .hero { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .hero img { width: 96px; height: 96px; }
   }
 </style>
 </head>
 <body>
-<h1>Paul Carver Tiffany III</h1>
-<p class="lead">Independent researcher</p>
+<div class="wrap">
 
-<h2>Research</h2>
-<ul>
-  <li><strong>The Cost of Cacophony: Geometric Limits on Multi-Constraint Alignment.</strong> arXiv preprint (cs.AI), forthcoming. <a href="https://github.com/PaulTiffany/cost">code</a></li>
-  <li><strong>The Hypothesis Surface: An Operational Epistemology for Autonomous Research.</strong> AGI-26 (Springer LNAI), poster, June 2026.</li>
-</ul>
+  <div class="hero">
+    <img src="assets/author.jpg" alt="Paul Carver Tiffany III">
+    <div>
+      <h1>Paul Carver Tiffany III</h1>
+      <p class="lead">Independent Researcher</p>
+    </div>
+  </div>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="https://github.com/PaulTiffany">GitHub</a></li>
-  <li><a href="https://orcid.org/0009-0003-4785-6797">ORCID</a></li>
-  <li><a href="https://www.linkedin.com/in/paultiffany/">LinkedIn</a></li>
-  <li><a href="https://paleae.com/">paleae.com</a></li>
-  <li><a href="https://compitum.space/">compitum.space</a></li>
-  <li><a href="mailto:paulctiffany@gmail.com">paulctiffany@gmail.com</a></li>
-</ul>
+  <section>
+    <h2>Research</h2>
+    <ul class="entries">
+      <li>
+        <div class="entry-title">The Cost of Cacophony: Geometric Limits on Multi-Constraint Alignment</div>
+        <div class="entry-meta">arXiv preprint (cs.AI), forthcoming &middot; <a href="https://github.com/PaulTiffany/cost">code</a></div>
+      </li>
+      <li>
+        <div class="entry-title">The Hypothesis Surface: An Operational Epistemology for Autonomous Research</div>
+        <div class="entry-meta">AGI-26 (Springer LNAI), poster, June 2026 &middot; <a href="https://paultiffany.github.io/come-to-AGI-26/">poster &amp; materials</a></div>
+      </li>
+    </ul>
+  </section>
 
+  <section>
+    <h2>Projects</h2>
+    <ul class="entries">
+      <li>
+        <div class="entry-title">Principia Symbolica</div>
+        <div class="entry-meta">Verifiable draft manuscript, with a machine-readable atlas and a growing Lean formalization &middot; <a href="https://github.com/PaulTiffany/Principia-Symbolica">repo</a></div>
+      </li>
+      <li>
+        <div class="entry-title">Sketched</div>
+        <div class="entry-meta">A local-first, witnessed drawing surface where humans hold authority and agents propose auditable changes &middot; <a href="https://github.com/PaulTiffany/sketched">repo</a></div>
+      </li>
+      <li>
+        <div class="entry-title">Chalked</div>
+        <div class="entry-meta">A permission-gated shared whiteboard — people hold the eraser. OmegaClaw integration demo, ASI:Create &middot; <a href="https://paultiffany.github.io/chalked/">demo</a> &middot; <a href="https://github.com/PaulTiffany/chalked">repo</a></div>
+      </li>
+      <li>
+        <div class="entry-title">Come</div>
+        <div class="entry-meta">Mutation-tested adapter pipeline bridging OpenCog Learn and OpenNARS ONA &middot; <a href="https://github.com/PaulTiffany/Come">repo</a></div>
+      </li>
+      <li>
+        <div class="entry-title">Compitum</div>
+        <div class="entry-meta">A geometrically aware AI router &middot; <a href="https://compitum.space/">compitum.space</a></div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Elsewhere</h2>
+    <nav class="links">
+      <a href="https://github.com/PaulTiffany">GitHub</a>
+      <a href="https://orcid.org/0009-0003-4785-6797">ORCID</a>
+      <a href="https://www.linkedin.com/in/paultiffany/">LinkedIn</a>
+      <a href="https://paleae.com/">paleae.com</a>
+      <a href="https://compitum.space/">compitum.space</a>
+      <a href="mailto:paulctiffany@gmail.com">Email</a>
+    </nav>
+  </section>
+
+  <footer>&copy; 2026 Paul Carver Tiffany III</footer>
+
+</div>
 </body>
 </html>
