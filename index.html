@@ -29,12 +29,21 @@
     width: 128px; height: 128px; object-fit: cover; border-radius: 50%;
     border: 1px solid var(--rule); flex: none;
   }
+  /*
+    Fluid type: scales continuously with actual viewport width instead of
+    jumping between two fixed breakpoint states. Fixes the portrait-vs-
+    landscape inconsistency a discrete breakpoint causes -- landscape phone
+    width (~800px) used to cross into "desktop" sizing while portrait
+    (~390px) stayed in the smaller tier. clamp(min, preferred, max) means
+    every width in between gets a proportionally interpolated size, and
+    both orientations land in the same comfortable range.
+  */
   .hero-text { min-width: 0; }
-  .hero h1 { font-weight: 500; font-size: 30px; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; overflow-wrap: break-word; }
-  .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 14px; letter-spacing: 2px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
+  .hero h1 { font-weight: 500; font-size: clamp(26px, 7vw, 32px); line-height: 1.2; letter-spacing: 1px; margin: 0 0 8px; color: #f2f0e9; overflow-wrap: break-word; }
+  .hero .lead { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 1.5px; color: var(--ink-dim); text-transform: uppercase; margin: 0; }
 
   h2 {
-    font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 12px; letter-spacing: 3px;
+    font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: clamp(11px, 2.8vw, 13px); letter-spacing: 3px;
     text-transform: uppercase; color: var(--ink-dim); margin: 0 0 18px; padding-bottom: 10px;
     border-bottom: 1px solid var(--rule);
   }
@@ -43,31 +52,27 @@
   ul.entries { list-style: none; margin: 0; padding: 0; }
   ul.entries li { margin-bottom: 20px; }
   ul.entries li:last-child { margin-bottom: 0; }
-  .entry-title { font-size: 17px; font-weight: 400; color: var(--ink); line-height: 1.45; overflow-wrap: break-word; hyphens: auto; }
-  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; overflow-wrap: break-word; }
+  .entry-title { font-size: clamp(17px, 4.5vw, 19px); font-weight: 400; color: var(--ink); line-height: 1.45; overflow-wrap: break-word; hyphens: auto; }
+  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 0.5px; color: var(--ink-dimmer); margin-top: 5px; line-height: 1.6; overflow-wrap: break-word; }
   .entry-meta a { text-decoration: underline; }
 
   nav.links { display: flex; flex-wrap: wrap; gap: 10px 8px; }
   nav.links a {
-    font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px;
+    font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 3.3vw, 15px); letter-spacing: 1px;
     text-decoration: none; border: 1px solid var(--rule); border-radius: 3px;
-    padding: 8px 14px; white-space: nowrap;
+    padding: 11px 16px; white-space: nowrap;
   }
   nav.links a:hover { border-color: rgba(232,230,223,0.5); }
 
-  footer { margin-top: 64px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--ink-dimmer); }
+  footer { margin-top: 64px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 2.6vw, 12px); letter-spacing: 1px; color: var(--ink-dimmer); }
 
+  /* Layout (not type size) still changes at a breakpoint -- stacking the
+     hero photo above the name is a structural call, not something that
+     should fluidly interpolate. */
   @media (max-width: 560px) {
     .wrap { padding: 40px 20px 56px; }
     .hero { flex-direction: column; align-items: flex-start; gap: 18px; }
     .hero img { width: 92px; height: 92px; }
-    .hero h1 { font-size: 28px; line-height: 1.2; }
-    .hero .lead { font-size: 15px; letter-spacing: 1.5px; }
-    h2 { font-size: 13px; letter-spacing: 2.5px; }
-    .entry-title { font-size: 18px; line-height: 1.4; }
-    .entry-meta { font-size: 14px; line-height: 1.6; }
-    nav.links a { padding: 12px 16px; font-size: 15px; }
-    footer { font-size: 12px; }
   }
 </style>
 </head>
