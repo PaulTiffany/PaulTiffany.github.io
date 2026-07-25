@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paultiffany.github.io/Principia-Symbolica/sitemap.xml
+Sitemap: https://paultiffany.github.io/sitemap.xml
