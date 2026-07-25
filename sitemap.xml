@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://paultiffany.github.io/site-sitemap.xml</loc>
-    <lastmod>2026-07-25</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://paultiffany.github.io/Principia-Symbolica/sitemap.xml</loc>
-    <lastmod>2026-07-25</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://paultiffany.github.io/come-to-AGI-26/sitemap.xml</loc>
-    <lastmod>2026-07-25</lastmod>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://paultiffany.github.io/</loc></url>
+  <url><loc>https://paultiffany.github.io/Principia-Symbolica/</loc></url>
+  <url><loc>https://paultiffany.github.io/Principia-Symbolica/main.pdf</loc></url>
+  <url><loc>https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json</loc></url>
+  <url><loc>https://paultiffany.github.io/Principia-Symbolica/llms.txt</loc></url>
+  <url><loc>https://paultiffany.github.io/come-to-AGI-26/</loc></url>
+  <url><loc>https://paultiffany.github.io/come-to-AGI-26/poster/</loc></url>
+  <url><loc>https://paultiffany.github.io/come-to-AGI-26/tour/</loc></url>
+  <url><loc>https://paultiffany.github.io/come-to-AGI-26/BGI-Open-Build/</loc></url>
+  <url><loc>https://paultiffany.github.io/come-to-AGI-26/chat/</loc></url>
+  <url><loc>https://paultiffany.github.io/wicked-geometry/</loc></url>
+  <url><loc>https://paultiffany.github.io/wicked-geometry/wicked_geometry.pdf</loc></url>
+</urlset>
