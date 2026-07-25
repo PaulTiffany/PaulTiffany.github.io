@@ -6,7 +6,9 @@
 
 - [The Hypothesis Surface — AGI-26](https://paultiffany.github.io/come-to-AGI-26/): Published paper, poster, guided tour, and public companion materials.
 - [Principia Symbolica](https://paultiffany.github.io/Principia-Symbolica/): Main public doorway for the book and its machine-readable resources.
-- [Principia Symbolica Atlas — canonical JSON](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Structured mathematical content, source bodies, proof status, citations, labels, and dependency edges. Machine readers should fetch this URL directly when exact structure matters.
+- [Principia Symbolica — searchable HTML atlas](https://paultiffany.github.io/Principia-Symbolica/atlas/): Crawlable projection of all 1,914 structured atlas records, ordered according to the manuscript's `src/main.tex` publication sequence.
+- [Principia Symbolica Atlas — canonical JSON](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Authoritative structured mathematical content, source bodies, proof status, citations, labels, and dependency edges.
+- [Principia Symbolica Atlas — text fallback](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt): Byte-identical plain-text fallback for tools that cannot retrieve JSON directly.
 - [Principia Symbolica PDF](https://paultiffany.github.io/Principia-Symbolica/main.pdf): Human-readable manuscript.
 - [Wicked Geometry](https://paultiffany.github.io/wicked-geometry/): Public manuscript and supporting evidence on atlas fracture and observer-relative geometry.
 - [Sketched](https://paultiffany.github.io/sketched/): Local-first witnessed drawing surface.
@@ -21,4 +23,4 @@
 
 ## Reading guidance
 
-Humans begin with the Principia Symbolica doorway and book. Machine readers begin with the canonical JSON atlas when exact structure, proof status, citation, or dependency information matters. Use public gateways before consulting repositories. Treat archived research repositories as historical records rather than live editing targets. Preserve distinctions among published results, public demonstrations, formalization work, and exploratory materials.
+Humans begin with the Principia Symbolica doorway and book. Search systems and ordinary web tools use the searchable HTML atlas. Machine readers use the canonical JSON when exact structure, proof status, citation, or dependency information matters, with the text mirror as fallback. Use public gateways before consulting repositories. Treat archived research repositories as historical records rather than live editing targets. Preserve distinctions among published results, public demonstrations, formalization work, and exploratory materials.
