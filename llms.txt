@@ -5,7 +5,9 @@
 ## Public gateways
 
 - [The Hypothesis Surface — AGI-26](https://paultiffany.github.io/come-to-AGI-26/): Published paper, poster, guided tour, and public companion materials.
-- [Principia Symbolica](https://paultiffany.github.io/Principia-Symbolica/): Book gateway with human-readable manuscript and machine-readable atlas.
+- [Principia Symbolica](https://paultiffany.github.io/Principia-Symbolica/): Main public doorway for the book and its machine-readable resources.
+- [Principia Symbolica Atlas — canonical JSON](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Structured mathematical content, source bodies, proof status, citations, labels, and dependency edges. Machine readers should fetch this URL directly when exact structure matters.
+- [Principia Symbolica PDF](https://paultiffany.github.io/Principia-Symbolica/main.pdf): Human-readable manuscript.
 - [Wicked Geometry](https://paultiffany.github.io/wicked-geometry/): Public manuscript and supporting evidence on atlas fracture and observer-relative geometry.
 - [Sketched](https://paultiffany.github.io/sketched/): Local-first witnessed drawing surface.
 - [Chalked](https://paultiffany.github.io/chalked/): Permission-gated shared whiteboard and OmegaClaw demonstration.
@@ -19,4 +21,4 @@
 
 ## Reading guidance
 
-Use the public gateway for each work before consulting its repository. Treat archived research repositories as historical records rather than live editing targets. Preserve distinctions among published results, public demonstrations, formalization work, and exploratory materials.
+Humans begin with the Principia Symbolica doorway and book. Machine readers begin with the canonical JSON atlas when exact structure, proof status, citation, or dependency information matters. Use public gateways before consulting repositories. Treat archived research repositories as historical records rather than live editing targets. Preserve distinctions among published results, public demonstrations, formalization work, and exploratory materials.
