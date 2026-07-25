@@ -1,0 +1,22 @@
+# Paul Carver Tiffany III
+
+> Independent researcher in operational epistemology, observer-relative geometry, geometric alignment, and auditable AI systems.
+
+## Public gateways
+
+- [The Hypothesis Surface — AGI-26](https://paultiffany.github.io/come-to-AGI-26/): Published paper, poster, guided tour, and public companion materials.
+- [Principia Symbolica](https://paultiffany.github.io/Principia-Symbolica/): Book gateway with human-readable manuscript and machine-readable atlas.
+- [Wicked Geometry](https://paultiffany.github.io/wicked-geometry/): Public manuscript and supporting evidence on atlas fracture and observer-relative geometry.
+- [Sketched](https://paultiffany.github.io/sketched/): Local-first witnessed drawing surface.
+- [Chalked](https://paultiffany.github.io/chalked/): Permission-gated shared whiteboard and OmegaClaw demonstration.
+- [Compitum](https://compitum.space/): Geometrically aware AI router.
+
+## Identity
+
+- [GitHub](https://github.com/PaulTiffany)
+- [ORCID](https://orcid.org/0009-0003-4785-6797)
+- [LinkedIn](https://www.linkedin.com/in/paultiffany/)
+
+## Reading guidance
+
+Use the public gateway for each work before consulting its repository. Treat archived research repositories as historical records rather than live editing targets. Preserve distinctions among published results, public demonstrations, formalization work, and exploratory materials.
