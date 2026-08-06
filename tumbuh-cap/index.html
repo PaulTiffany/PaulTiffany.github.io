@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tumbuh Cap — Gravity-Separated Plant Metabolism</title>
+<meta name="description" content="An open-hardware pilot for a modular plant cap with clean-water separation, a removable biological cartridge, and gravity-driven nutrient flow.">
+<meta name="theme-color" content="#111410">
+<style>
+:root{--bg:#111410;--panel:#191d18;--ink:#edf0e8;--muted:#aab3a3;--line:#343c31;--green:#9bd45d;--blue:#75c7ff;--brown:#d28a52;--gold:#e7c66a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#263022 0,#111410 38%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:var(--green)}.wrap{max-width:1120px;margin:auto;padding:48px 22px 90px}.eyebrow{font:600 13px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(48px,9vw,104px);line-height:.92;letter-spacing:-.055em;margin:18px 0 24px;max-width:900px}h2{font-size:clamp(30px,5vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px}p{font-size:clamp(18px,2.1vw,23px);color:var(--muted);max-width:820px}.hero{padding:46px 0 66px}.hero strong{color:var(--ink)}.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.badge{border:1px solid var(--line);border-radius:999px;padding:9px 13px;font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);background:#151914}.diagram{margin:28px 0 72px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#1a2018,#121511);padding:24px;overflow:hidden}.diagram svg{display:block;width:100%;height:auto}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin:0 0 76px}.card{grid-column:span 4;border:1px solid var(--line);border-radius:20px;background:rgba(25,29,24,.85);padding:24px;min-height:210px}.card .num{font:600 13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--gold);letter-spacing:.12em}.card h3{font-size:25px;margin:14px 0 8px}.card p{font-size:17px;margin:0}.split{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start;margin-bottom:76px}.panel{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:28px}.steps{counter-reset:s}.step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}.step:first-child{border-top:0}.step:before{counter-increment:s;content:counter(s);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#293126;color:var(--green);font-weight:700}.step h3{margin:0 0 6px}.step p{font-size:17px;margin:0}.channel{display:grid;grid-template-columns:14px 1fr;gap:12px;margin:18px 0}.swatch{width:12px;height:12px;border-radius:50%;margin-top:8px}.clean{background:var(--blue)}.living{background:var(--brown)}.root{background:var(--green)}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#d9efc1}.cta{border:1px solid #4a5943;border-radius:26px;padding:32px;background:linear-gradient(135deg,#20271d,#151814);margin-top:28px}.cta p{margin-bottom:24px}.button{display:inline-block;text-decoration:none;background:var(--green);color:#10140d;font-weight:800;padding:13px 18px;border-radius:11px;margin:4px 8px 4px 0}.button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}footer{margin-top:70px;padding-top:26px;border-top:1px solid var(--line);color:#7f8979;font-size:14px}@media(max-width:780px){.card{grid-column:span 12}.split{grid-template-columns:1fr}.wrap{padding-top:24px}.hero{padding-top:24px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">Open hardware · pilot v0.1</div>
+<h1>Tumbuh Cap</h1>
+<p><strong>A small machine for keeping ecological distinctions honest.</strong> Clean water remains clean. Organic matter enters a removable living chamber. Gravity carries moisture and soluble nutrients toward the roots. Every hidden process must have a visible service point.</p>
+<div class="badges"><span class="badge">Ø 120 mm</span><span class="badge">No pump required</span><span class="badge">Parametric OpenSCAD</span><span class="badge">IdeaSpace-ready coupon</span></div>
+</section>
+
+<section class="diagram" aria-label="System architecture">
+<svg viewBox="0 0 1000 470" role="img" aria-labelledby="title desc">
+<title id="title">Tumbuh Cap channel architecture</title><desc id="desc">A central plant opening, an isolated clean-water inlet, and a removable biological cartridge feeding roots through gravity.</desc>
+<defs><marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#75c7ff"/></marker><marker id="arrowN" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#9bd45d"/></marker><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".35"/></filter></defs>
+<ellipse cx="500" cy="385" rx="330" ry="35" fill="#0c0f0b"/>
+<g filter="url(#shadow)"><path d="M210 250Q210 205 255 205H745Q790 205 790 250V310Q790 340 760 340H240Q210 340 210 310Z" fill="#262c24" stroke="#4b5746" stroke-width="4"/><path d="M275 340H725L680 405H320Z" fill="#1a1f19" stroke="#3f493b" stroke-width="4"/></g>
+<circle cx="500" cy="230" r="92" fill="#171b16" stroke="#596653" stroke-width="5"/><circle cx="500" cy="230" r="55" fill="#3a2b1f"/><path d="M500 230C480 178 447 153 430 124M500 230C514 174 548 148 572 120M500 230C500 184 500 146 500 98" stroke="#9bd45d" stroke-width="11" stroke-linecap="round" fill="none"/><ellipse cx="425" cy="120" rx="35" ry="17" fill="#82bd4f" transform="rotate(24 425 120)"/><ellipse cx="577" cy="115" rx="38" ry="18" fill="#8bc957" transform="rotate(-24 577 115)"/><ellipse cx="500" cy="92" rx="35" ry="18" fill="#9bd45d"/>
+<g><rect x="275" y="188" width="95" height="92" rx="18" fill="#16222b" stroke="#75c7ff" stroke-width="4"/><path d="M322 145V310" stroke="#75c7ff" stroke-width="9" stroke-linecap="round" marker-end="url(#arrowB)"/><text x="322" y="126" fill="#75c7ff" text-anchor="middle" font-size="24" font-family="monospace">CLEAN</text></g>
+<g><rect x="630" y="170" width="105" height="135" rx="18" fill="#2a1d14" stroke="#d28a52" stroke-width="4"/><path d="M646 190h72M646 213h72M646 236h72M646 259h72" stroke="#d28a52" stroke-width="7" stroke-linecap="round"/><path d="M682 305V365" stroke="#9bd45d" stroke-width="9" stroke-linecap="round" marker-end="url(#arrowN)"/><text x="682" y="145" fill="#d28a52" text-anchor="middle" font-size="24" font-family="monospace">LIVING</text></g>
+<path d="M500 285V390" stroke="#9bd45d" stroke-width="6" stroke-dasharray="10 10" marker-end="url(#arrowN)"/><text x="500" y="440" fill="#9bd45d" text-anchor="middle" font-size="26" font-family="monospace">ROOT INTERFACE</text>
+<text x="104" y="220" fill="#aab3a3" font-size="21" font-family="sans-serif">known input</text><line x1="190" y1="224" x2="271" y2="224" stroke="#75c7ff" stroke-width="2"/>
+<text x="770" y="220" fill="#aab3a3" font-size="21" font-family="sans-serif">removable cartridge</text><line x1="737" y1="224" x2="760" y2="224" stroke="#d28a52" stroke-width="2"/>
+</svg>
+</section>
+
+<section class="grid">
+<article class="card"><div class="num">01 · SEPARATE</div><h3>Two water stories</h3><p>The clean tube never passes through mulch, compost, biochar, or animal habitat. Cross-channel dye testing makes that claim falsifiable.</p></article>
+<article class="card"><div class="num">02 · SERVICE</div><h3>Remove the metabolism</h3><p>The biological core lifts out as a cartridge. A clog, odor, or experimental treatment can be inspected without uprooting the plant.</p></article>
+<article class="card"><div class="num">03 · FALL</div><h3>Let gravity compute</h3><p>No pump is required for the first pilot. Height, aperture, media, and moisture determine flow; we measure rather than presume.</p></article>
+</section>
+
+<section class="split">
+<div>
+<div class="eyebrow">The pilot</div><h2>Prove the plumbing before inviting the ecology.</h2>
+<p>The first successful artifact is not a thriving autonomous planter. It is a boring, inspectable cap that does not leak across its own distinctions.</p>
+<div class="channel"><span class="swatch clean"></span><p><strong>Clean:</strong> measured water, soft tube, replaceable grommet.</p></div>
+<div class="channel"><span class="swatch living"></span><p><strong>Living:</strong> coarse mesh, washed biochar, leaf litter, then microbes.</p></div>
+<div class="channel"><span class="swatch root"></span><p><strong>Root:</strong> visible gravity drainage into a sacrificial planter or catch vessel.</p></div>
+</div>
+<div class="panel">
+<div class="steps">
+<div class="step"><div><h3>Print the coupon</h3><p>Validate grommet diameter, cartridge clearance, and slicer behavior with a tiny part.</p></div></div>
+<div class="step"><div><h3>Run dyed-water isolation</h3><p>Put dye in one channel only. Any color crossing the boundary is an immediate failure.</p></div></div>
+<div class="step"><div><h3>Measure gravity flow</h3><p>Record first drip, 5-minute, 15-minute, and 30-minute output for a 50 mL input.</p></div></div>
+<div class="step"><div><h3>Add complexity one layer at a time</h3><p>Biochar, leaf litter, finished compost, microbial pilot—and only later, considered habitat.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="eyebrow">Fredericksburg fabrication loop</div><h2>Designed around a real place.</h2>
+<p>IdeaSpace gives the project a concrete production rhythm: train on the printer, carry the actual fittings to the machine, print the fit coupon first, then use short revision loops rather than betting the whole design on one long print.</p>
+<div class="cta"><p><strong>The source is already parametric.</strong> Change <code>part = "test_coupon"</code>, export an STL, and arrive with the tube, grommet, mesh, pot, and calipers. The page is not the product; the measured revision history is.</p><a class="button" href="cad/tumbuh_cap_v0.scad">Open the CAD source</a><a class="button secondary" href="README.md">Read the validation protocol</a><a class="button secondary" href="https://github.com/AlwaysHungrie/tumbuh-omegaclaw-experiments">Tumbuh / OmegaClaw</a></div>
+</section>
+
+<footer>Concept and architecture: Paul Carver Tiffany III with GPT research collaboration. Ecological input from Ralf. Hardware: CERN-OHL-P-2.0 · Documentation: CC BY 4.0 · Future software: MIT. Experimental garden prototype; not certified for potable water, food contact, animal containment, pressure, or unattended irrigation.</footer>
+</main>
+</body>
+</html>
